@@ -116,7 +116,7 @@ public enum JsonType {
 
 
 // MARK:- operators
-infix operator <- {}
+infix operator <- { associativity right precedence 90 }
 public func <-(inout left: Int, right: AnyObject?) {
     let type = right.map { JsonType($0) }
     type?.value().map { left = $0 }
