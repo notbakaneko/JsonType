@@ -152,3 +152,44 @@ public func <-(inout left: NSArray, right: AnyObject?) {
     type?.value().map { left = $0 }
 }
 
+
+
+
+// MARK:- operators for direct assignment
+prefix operator <-? {}
+public prefix func <-?(right: AnyObject?) -> Int? {
+    let type = right.map { JsonType($0) }
+    return type?.value()
+}
+
+public prefix func <-?(right: AnyObject?) -> UInt? {
+    let type = right.map { JsonType($0) }
+    return type?.value()
+}
+
+public prefix func <-?(right: AnyObject?) -> Double? {
+    let type = right.map { JsonType($0) }
+    return type?.value()
+}
+
+public prefix func <-?(right: AnyObject?) -> String? {
+    let type = right.map { JsonType($0) }
+    return type?.value()
+}
+
+public prefix func <-?(right: AnyObject?) -> Bool? {
+    let type = right.map { JsonType($0) }
+    return type?.value()
+}
+
+public prefix func <-?(right: AnyObject?) -> NSDictionary? {
+    let type = right.map { JsonType($0) }
+    return type?.value()
+}
+
+public prefix func <-?(right: AnyObject?) -> NSArray? {
+    let type = right.map { JsonType($0) }
+    return type?.value()
+}
+
+
