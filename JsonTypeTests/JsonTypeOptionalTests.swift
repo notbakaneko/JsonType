@@ -16,8 +16,8 @@ class JsonTypeOptionalTests: XCTestCase {
             "string": "This is a string.",
             "scalar": 3,
             "scalar_string": "7",
-            "float": 0.9,
-            "float_string": "0.9",
+            "float": 1.9,
+            "float_string": "1.9",
             "bool": true,
             "bool_string": "true",
             "array": [ "a", "b", "c", "d" ],
@@ -56,7 +56,7 @@ class JsonTypeOptionalTests: XCTestCase {
 
         var floatString = iv
         floatString <- testDictionary["float_string"]
-        XCTAssert(floatString == "0.9")
+        XCTAssert(floatString == "1.9")
 
         var bool = iv
         bool <- testDictionary["bool"]
@@ -80,7 +80,7 @@ class JsonTypeOptionalTests: XCTestCase {
         var iv: Int?
         var string = iv
         string <- testDictionary["string"]
-        XCTAssert(string == 0)
+        XCTAssert(string == nil)
 
         var scalar = iv
         scalar <- testDictionary["scalar"]
@@ -92,11 +92,11 @@ class JsonTypeOptionalTests: XCTestCase {
 
         var float = iv
         float <- testDictionary["float"]
-        XCTAssert(float == 0)
+        XCTAssert(float == 1)
 
         var floatString = iv
         floatString <- testDictionary["float_string"]
-        XCTAssert(floatString == 0)
+        XCTAssert(floatString == nil)
 
         var bool = iv
         bool <- testDictionary["bool"]
@@ -104,7 +104,7 @@ class JsonTypeOptionalTests: XCTestCase {
 
         var boolString = iv
         boolString <- testDictionary["bool_string"]
-        XCTAssert(boolString == 0)
+        XCTAssert(boolString == nil)
 
         var array = iv
         array <- testDictionary["array"]
@@ -132,11 +132,11 @@ class JsonTypeOptionalTests: XCTestCase {
 
         var float = iv
         float <- testDictionary["float"]
-        XCTAssert(float == 0.9)
+        XCTAssert(float == 1.9)
 
         var floatString = iv
         floatString <- testDictionary["float_string"]
-        XCTAssert(floatString == 0.9)
+        XCTAssert(floatString == 1.9)
 
         var bool = iv
         bool <- testDictionary["bool"]

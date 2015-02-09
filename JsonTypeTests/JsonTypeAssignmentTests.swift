@@ -17,8 +17,8 @@ class JsonTypeAssignmentTests: XCTestCase {
             "string": "This is a string.",
             "scalar": 3,
             "scalar_string": "7",
-            "float": 0.9,
-            "float_string": "0.9",
+            "float": 1.9,
+            "float_string": "1.9",
             "bool": true,
             "bool_string": "true",
             "array": [ "a", "b", "c", "d" ],
@@ -51,7 +51,7 @@ class JsonTypeAssignmentTests: XCTestCase {
         XCTAssert(float == nil)
 
         let floatString: String? = <-?testDictionary["float_string"]
-        XCTAssert(floatString == "0.9")
+        XCTAssert(floatString == "1.9")
 
         let bool: String? = <-?testDictionary["bool"]
         XCTAssert(bool == nil)
@@ -69,7 +69,7 @@ class JsonTypeAssignmentTests: XCTestCase {
 
     func test_Int() {
         let string: Int? = <-?testDictionary["string"]
-        XCTAssert(string == 0)  // 0 because of integerValue
+        XCTAssert(string == nil)
 
         let scalar: Int? = <-?testDictionary["scalar"]
         XCTAssert(scalar == 3)
@@ -78,16 +78,16 @@ class JsonTypeAssignmentTests: XCTestCase {
         XCTAssert(scalarString == 7)
 
         let float: Int? = <-?testDictionary["float"]
-        XCTAssert(float == 0) // 0 because of integerValue
+        XCTAssert(float == 1)
 
         let floatString: Int? = <-?testDictionary["float_string"]
-        XCTAssert(floatString == 0)   // 0 because of integerValue
+        XCTAssert(floatString == nil)
 
         let bool: Int? = <-?testDictionary["bool"]
         XCTAssert(bool == 1)
 
         let boolString: Int? = <-?testDictionary["bool_string"]
-        XCTAssert(boolString == 0)    // 0 because of integerValue
+        XCTAssert(boolString == nil)
 
         let array: Int? = <-?testDictionary["array"]
         XCTAssert(array == nil)
@@ -108,10 +108,10 @@ class JsonTypeAssignmentTests: XCTestCase {
         XCTAssert(scalarString == 7.0)
 
         let float: Double? = <-?testDictionary["float"]
-        XCTAssert(float == 0.9)
+        XCTAssert(float == 1.9)
 
         let floatString: Double? = <-?testDictionary["float_string"]
-        XCTAssert(floatString == 0.9)
+        XCTAssert(floatString == 1.9)
 
         let bool: Double? = <-?testDictionary["bool"]
         XCTAssert(bool == 1)
