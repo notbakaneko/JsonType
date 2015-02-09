@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  JsonType.swift
 //  JsonType
 //
 //  Created by bakaneko on 6/02/2015.
