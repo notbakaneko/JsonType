@@ -11,7 +11,8 @@
 		ED14A9611A884DB70065C889 /* JsonType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED14A9551A884DB70065C889 /* JsonType.framework */; };
 		ED14A9681A884DB70065C889 /* JsonTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14A9671A884DB70065C889 /* JsonTypeTests.swift */; };
 		ED14A9721A884E390065C889 /* JsonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14A9711A884E390065C889 /* JsonType.swift */; };
-		EDD11C721A88845500523266 /* JsonTypeOptionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD11C711A88845500523266 /* JsonTypeOptionalTests.swift */; };
+		EDD11C721A88845500523266 /* JsonTypeAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD11C711A88845500523266 /* JsonTypeAssignmentTests.swift */; };
+		EDD11C741A88ADDB00523266 /* JsonTypeOptionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD11C731A88ADDB00523266 /* JsonTypeOptionalTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +33,8 @@
 		ED14A9661A884DB70065C889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED14A9671A884DB70065C889 /* JsonTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTypeTests.swift; sourceTree = "<group>"; };
 		ED14A9711A884E390065C889 /* JsonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonType.swift; sourceTree = "<group>"; };
-		EDD11C711A88845500523266 /* JsonTypeOptionalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonTypeOptionalTests.swift; sourceTree = "<group>"; };
+		EDD11C711A88845500523266 /* JsonTypeAssignmentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonTypeAssignmentTests.swift; sourceTree = "<group>"; };
+		EDD11C731A88ADDB00523266 /* JsonTypeOptionalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonTypeOptionalTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				ED14A9671A884DB70065C889 /* JsonTypeTests.swift */,
-				EDD11C711A88845500523266 /* JsonTypeOptionalTests.swift */,
+				EDD11C711A88845500523266 /* JsonTypeAssignmentTests.swift */,
+				EDD11C731A88ADDB00523266 /* JsonTypeOptionalTests.swift */,
 				ED14A9651A884DB70065C889 /* Supporting Files */,
 			);
 			path = JsonTypeTests;
@@ -223,8 +226,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD11C741A88ADDB00523266 /* JsonTypeOptionalTests.swift in Sources */,
 				ED14A9681A884DB70065C889 /* JsonTypeTests.swift in Sources */,
-				EDD11C721A88845500523266 /* JsonTypeOptionalTests.swift in Sources */,
+				EDD11C721A88845500523266 /* JsonTypeAssignmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

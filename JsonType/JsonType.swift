@@ -122,7 +122,17 @@ public func <-(inout left: Int, right: AnyObject?) {
     type?.value().map { left = $0 }
 }
 
+public func <-(inout left: Int?, right: AnyObject?) {
+    let type = right.map { JsonType($0) }
+    type?.value().map { left = $0 }
+}
+
 public func <-(inout left: UInt, right: AnyObject?) {
+    let type = right.map { JsonType($0) }
+    type?.value().map { left = $0 }
+}
+
+public func <-(inout left: UInt?, right: AnyObject?) {
     let type = right.map { JsonType($0) }
     type?.value().map { left = $0 }
 }
@@ -132,7 +142,17 @@ public func <-(inout left: Double, right: AnyObject?) {
     type?.value().map { left = $0 }
 }
 
+public func <-(inout left: Double?, right: AnyObject?) {
+    let type = right.map { JsonType($0) }
+    type?.value().map { left = $0 }
+}
+
 public func <-(inout left: String, right: AnyObject?) {
+    let type = right.map { JsonType($0) }
+    type?.value().map { left = $0 }
+}
+
+public func <-(inout left: String?, right: AnyObject?) {
     let type = right.map { JsonType($0) }
     type?.value().map { left = $0 }
 }
@@ -142,7 +162,17 @@ public func <-(inout left: Bool, right: AnyObject?) {
     type?.value().map { left = $0 }
 }
 
+public func <-(inout left: Bool?, right: AnyObject?) {
+    let type = right.map { JsonType($0) }
+    type?.value().map { left = $0 }
+}
+
 public func <-(inout left: NSDictionary, right: AnyObject?) {
+    let type = right.map { JsonType($0) }
+    type?.value().map { left = $0 }
+}
+
+public func <-(inout left: NSDictionary?, right: AnyObject?) {
     let type = right.map { JsonType($0) }
     type?.value().map { left = $0 }
 }
@@ -151,6 +181,12 @@ public func <-(inout left: NSArray, right: AnyObject?) {
     let type = right.map { JsonType($0) }
     type?.value().map { left = $0 }
 }
+
+public func <-(inout left: NSArray?, right: AnyObject?) {
+    let type = right.map { JsonType($0) }
+    type?.value().map { left = $0 }
+}
+
 
 
 

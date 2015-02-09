@@ -10,7 +10,6 @@ import Foundation
 import XCTest
 import JsonType
 
-
 class JsonTypeOptionalTests: XCTestCase {
     lazy var testDictionary: NSDictionary = {
         return [
@@ -38,181 +37,242 @@ class JsonTypeOptionalTests: XCTestCase {
 
 
     func test_String() {
-        let string: String? = <-?testDictionary["string"]
+        var iv: String?
+        var string = iv
+        string <- testDictionary["string"]
         XCTAssert(string == "This is a string.")
 
-        let scalar: String? = <-?testDictionary["scalar"]
-        XCTAssert(scalar == nil)
+        var scalar = iv
+        scalar <- testDictionary["scalar"]
+        XCTAssert(scalar == iv)
 
-        let scalarString: String? = <-?testDictionary["scalar_string"]
+        var scalarString = iv
+        scalarString <- testDictionary["scalar_string"]
         XCTAssert(scalarString == "7")
 
-        let float: String? = <-?testDictionary["float"]
-        XCTAssert(float == nil)
+        var float = iv
+        float <- testDictionary["float"]
+        XCTAssert(float == iv)
 
-        let floatString: String? = <-?testDictionary["float_string"]
+        var floatString = iv
+        floatString <- testDictionary["float_string"]
         XCTAssert(floatString == "0.9")
 
-        let bool: String? = <-?testDictionary["bool"]
-        XCTAssert(bool == nil)
+        var bool = iv
+        bool <- testDictionary["bool"]
+        XCTAssert(bool == iv)
 
-        let boolString: String? = <-?testDictionary["bool_string"]
+        var boolString = iv
+        boolString <- testDictionary["bool_string"]
         XCTAssert(boolString == "true")
 
-        let array: String? = <-?testDictionary["array"]
-        XCTAssert(array == nil)
+        var array = iv
+        array <- testDictionary["array"]
+        XCTAssert(array == iv)
 
-        let dictionary: String? = <-?testDictionary["dictionary"]
-        XCTAssert(dictionary == nil)
+        var dictionary = iv
+        dictionary <- testDictionary["dictionary"]
+        XCTAssert(dictionary == iv)
     }
 
 
     func test_Int() {
-        let string: Int? = <-?testDictionary["string"]
-        XCTAssert(string == 0)  // 0 because of integerValue
+        var iv: Int?
+        var string = iv
+        string <- testDictionary["string"]
+        XCTAssert(string == 0)
 
-        let scalar: Int? = <-?testDictionary["scalar"]
+        var scalar = iv
+        scalar <- testDictionary["scalar"]
         XCTAssert(scalar == 3)
 
-        let scalarString: Int? = <-?testDictionary["scalar_string"]
+        var scalarString = 0
+        scalarString <- testDictionary["scalar_string"]
         XCTAssert(scalarString == 7)
 
-        let float: Int? = <-?testDictionary["float"]
-        XCTAssert(float == 0) // 0 because of integerValue
+        var float = iv
+        float <- testDictionary["float"]
+        XCTAssert(float == 0)
 
-        let floatString: Int? = <-?testDictionary["float_string"]
-        XCTAssert(floatString == 0)   // 0 because of integerValue
+        var floatString = iv
+        floatString <- testDictionary["float_string"]
+        XCTAssert(floatString == 0)
 
-        let bool: Int? = <-?testDictionary["bool"]
+        var bool = iv
+        bool <- testDictionary["bool"]
         XCTAssert(bool == 1)
 
-        let boolString: Int? = <-?testDictionary["bool_string"]
-        XCTAssert(boolString == 0)    // 0 because of integerValue
+        var boolString = iv
+        boolString <- testDictionary["bool_string"]
+        XCTAssert(boolString == 0)
 
-        let array: Int? = <-?testDictionary["array"]
-        XCTAssert(array == nil)
+        var array = iv
+        array <- testDictionary["array"]
+        XCTAssert(array == iv)
 
-        let dictionary: Int? = <-?testDictionary["dictionary"]
-        XCTAssert(dictionary == nil)
+        var dictionary = iv
+        dictionary <- testDictionary["dictionary"]
+        XCTAssert(dictionary == iv)
     }
 
 
     func test_Double() {
-        let string: Double? = <-?testDictionary["string"]
+        var iv: Double?
+        var string = iv
+        string <- testDictionary["string"]
         XCTAssert(string == 0.0)
 
-        let scalar: Double? = <-?testDictionary["scalar"]
+        var scalar = iv
+        scalar <- testDictionary["scalar"]
         XCTAssert(scalar == 3.0)
 
-        let scalarString: Double? = <-?testDictionary["scalar_string"]
+        var scalarString = iv
+        scalarString <- testDictionary["scalar_string"]
         XCTAssert(scalarString == 7.0)
 
-        let float: Double? = <-?testDictionary["float"]
+        var float = iv
+        float <- testDictionary["float"]
         XCTAssert(float == 0.9)
 
-        let floatString: Double? = <-?testDictionary["float_string"]
+        var floatString = iv
+        floatString <- testDictionary["float_string"]
         XCTAssert(floatString == 0.9)
 
-        let bool: Double? = <-?testDictionary["bool"]
+        var bool = iv
+        bool <- testDictionary["bool"]
         XCTAssert(bool == 1)
 
-        let boolString: Double? = <-?testDictionary["bool_string"]
+        var boolString = iv
+        boolString <- testDictionary["bool_string"]
         XCTAssert(boolString == 0.0)
 
-        let array: Double? = <-?testDictionary["array"]
-        XCTAssert(array == nil)
+        var array = iv
+        array <- testDictionary["array"]
+        XCTAssert(array == iv)
 
-        let dictionary: Double? = <-?testDictionary["dictionary"]
-        XCTAssert(dictionary == nil)
+        var dictionary = iv
+        dictionary <- testDictionary["dictionary"]
+        XCTAssert(dictionary == iv)
     }
 
 
     func test_Bool() {
-        let string: Bool? = <-?testDictionary["string"]
-        XCTAssert(string == nil)
+        var iv: Bool?
+        var string = iv
+        string <- testDictionary["string"]
+        XCTAssert(string == iv)
 
-        let scalar: Bool? = <-?testDictionary["scalar"]
+        var scalar = iv
+        scalar <- testDictionary["scalar"]
         XCTAssert(scalar == true)
 
-        let scalarString: Bool? = <-?testDictionary["scalar_string"]
-        XCTAssert(scalarString == nil)
+        var scalarString = iv
+        scalarString <- testDictionary["scalar_string"]
+        XCTAssert(scalarString == iv)
 
-        let float: Bool? = <-?testDictionary["float"]
+        var float = iv
+        float <- testDictionary["float"]
         XCTAssert(float == true)
 
-        let floatString: Bool? = <-?testDictionary["float_string"]
-        XCTAssert(floatString == nil)
+        var floatString = iv
+        floatString <- testDictionary["float_string"]
+        XCTAssert(floatString == iv)
 
-        let bool: Bool? = <-?testDictionary["bool"]
+        var bool = iv
+        bool <- testDictionary["bool"]
         XCTAssert(bool == true)
 
-        let boolString: Bool? = <-?testDictionary["bool_string"]
-        XCTAssert(boolString == nil)
+        var boolString = iv
+        boolString <- testDictionary["bool_string"]
+        XCTAssert(boolString == iv)
 
-        let array: Bool? = <-?testDictionary["array"]
-        XCTAssert(array == nil)
+        var array = iv
+        array <- testDictionary["array"]
+        XCTAssert(array == iv)
 
-        let dictionary: Bool? = <-?testDictionary["dictionary"]
-        XCTAssert(dictionary == nil)
+        var dictionary = iv
+        dictionary <- testDictionary["dictionary"]
+        XCTAssert(dictionary == iv)
     }
 
 
     func test_Array() {
-        let string: NSArray? = <-?testDictionary["string"]
-        XCTAssert(string == nil)
+        var iv: NSArray?
+        var string = iv
+        string <- testDictionary["string"]
+        XCTAssert(string == iv)
 
-        let scalar: NSArray? = <-?testDictionary["scalar"]
-        XCTAssert(scalar == nil)
+        var scalar = iv
+        scalar <- testDictionary["scalar"]
+        XCTAssert(scalar == iv)
 
-        let scalarString: NSArray? = <-?testDictionary["scalar_string"]
-        XCTAssert(scalarString == nil)
+        var scalarString = iv
+        scalarString <- testDictionary["scalar_string"]
+        XCTAssert(scalarString == iv)
 
-        let float: NSArray? = <-?testDictionary["float"]
-        XCTAssert(float == nil)
+        var float = iv
+        float <- testDictionary["float"]
+        XCTAssert(float == iv)
 
-        let floatString: NSArray? = <-?testDictionary["float_string"]
-        XCTAssert(floatString == nil)
+        var floatString = iv
+        floatString <- testDictionary["float_string"]
+        XCTAssert(floatString == iv)
 
-        let bool: NSArray? = <-?testDictionary["bool"]
-        XCTAssert(bool == nil)
+        var bool = iv
+        bool <- testDictionary["bool"]
+        XCTAssert(bool == iv)
 
-        let boolString: NSArray? = <-?testDictionary["bool_string"]
-        XCTAssert(boolString == nil)
+        var boolString = iv
+        boolString <- testDictionary["bool_string"]
+        XCTAssert(boolString == iv)
 
-        let array: NSArray? = <-?testDictionary["array"]
+        var array = iv
+        array <- testDictionary["array"]
         XCTAssert(array == [ "a", "b", "c", "d" ])
 
-        let dictionary: NSArray? = <-?testDictionary["dictionary"]
-        XCTAssert(dictionary == nil)
+        var dictionary = iv
+        dictionary <- testDictionary["dictionary"]
+        XCTAssert(dictionary == iv)
     }
 
 
     func test_Dictionary() {
-        let string: NSDictionary? = <-?testDictionary["string"]
-        XCTAssert(string == nil)
+        var iv: NSDictionary?
+        var string = iv
+        string <- testDictionary["string"]
+        XCTAssert(string == iv)
 
-        let scalar: NSDictionary? = <-?testDictionary["scalar"]
-        XCTAssert(scalar == nil)
+        var scalar = iv
+        scalar <- testDictionary["scalar"]
+        XCTAssert(scalar == iv)
 
-        let scalarString: NSDictionary? = <-?testDictionary["scalar_string"]
-        XCTAssert(scalarString == nil)
+        var scalarString = iv
+        scalarString <- testDictionary["scalar_string"]
+        XCTAssert(scalarString == iv)
 
-        let float: NSDictionary? = <-?testDictionary["float"]
-        XCTAssert(float == nil)
+        var float = iv
+        float <- testDictionary["float"]
+        XCTAssert(float == iv)
 
-        let floatString: NSDictionary? = <-?testDictionary["float_string"]
-        XCTAssert(floatString == nil)
+        var floatString = iv
+        floatString <- testDictionary["float_string"]
+        XCTAssert(floatString == iv)
 
-        let bool: NSDictionary? = <-?testDictionary["bool"]
-        XCTAssert(bool == nil)
+        var bool = iv
+        bool <- testDictionary["bool"]
+        XCTAssert(bool == iv)
         
-        let boolString: NSDictionary? = <-?testDictionary["bool_string"]
-        XCTAssert(boolString == nil)
+        var boolString = iv
+        boolString <- testDictionary["bool_string"]
+        XCTAssert(boolString == iv)
         
-        let array: NSDictionary? = <-?testDictionary["array"]
-        XCTAssert(array == nil)
+        var array = iv
+        array <- testDictionary["array"]
+        XCTAssert(array == iv)
         
-        let dictionary: NSDictionary? = <-?testDictionary["dictionary"]
+        var dictionary = iv
+        dictionary <- testDictionary["dictionary"]
         XCTAssert(dictionary == ["k": "v"])
     }
 }
+
