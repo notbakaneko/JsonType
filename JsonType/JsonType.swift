@@ -24,6 +24,9 @@ public enum JsonType {
             self = .NullType
 
         case let raw as NSString:
+            self = .StringType(raw as! String)
+
+        case let raw as String:
             self = .StringType(raw)
 
         case let raw as NSNumber:
