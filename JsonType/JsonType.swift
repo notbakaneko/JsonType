@@ -72,7 +72,7 @@ public enum JsonType {
 
     public func value() -> UInt? {
         switch self {
-        case .NumberType(let value): return value.unsignedLongValue
+        case .NumberType(let value): return UInt(value)
         case .StringType(let value):
             if let int = value.toInt() {
                 return UInt(int)
@@ -87,14 +87,14 @@ public enum JsonType {
     public func value() -> Bool? {
         switch self {
         case .BoolType(let value): return value
-        case .NumberType(let value): return value.boolValue
+        case .NumberType(let value): return Bool(value)
         default: return nil
         }
     }
 
     public func value() -> Double? {
         switch self {
-        case .NumberType(let value): return value.doubleValue
+        case .NumberType(let value): return Double(value)
         case .StringType(let value): return ((value as NSString).doubleValue)   // use strtod?
         default: return nil
         }
