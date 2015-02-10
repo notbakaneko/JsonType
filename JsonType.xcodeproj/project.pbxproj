@@ -11,6 +11,7 @@
 		ED14A9611A884DB70065C889 /* JsonType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED14A9551A884DB70065C889 /* JsonType.framework */; };
 		ED14A9681A884DB70065C889 /* JsonTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14A9671A884DB70065C889 /* JsonTypeTests.swift */; };
 		ED14A9721A884E390065C889 /* JsonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14A9711A884E390065C889 /* JsonType.swift */; };
+		EDB3FBE51A89A0BF005057D5 /* JsonTypePrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB3FBE41A89A0BF005057D5 /* JsonTypePrintable.swift */; };
 		EDD11C721A88845500523266 /* JsonTypeAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD11C711A88845500523266 /* JsonTypeAssignmentTests.swift */; };
 		EDD11C741A88ADDB00523266 /* JsonTypeOptionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD11C731A88ADDB00523266 /* JsonTypeOptionalTests.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		ED14A9661A884DB70065C889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED14A9671A884DB70065C889 /* JsonTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTypeTests.swift; sourceTree = "<group>"; };
 		ED14A9711A884E390065C889 /* JsonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonType.swift; sourceTree = "<group>"; };
+		EDB3FBE41A89A0BF005057D5 /* JsonTypePrintable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonTypePrintable.swift; sourceTree = "<group>"; };
 		EDD11C711A88845500523266 /* JsonTypeAssignmentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonTypeAssignmentTests.swift; sourceTree = "<group>"; };
 		EDD11C731A88ADDB00523266 /* JsonTypeOptionalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonTypeOptionalTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 				ED14A95A1A884DB70065C889 /* JsonType.h */,
 				ED14A9581A884DB70065C889 /* Supporting Files */,
 				ED14A9711A884E390065C889 /* JsonType.swift */,
+				EDB3FBE41A89A0BF005057D5 /* JsonTypePrintable.swift */,
 			);
 			path = JsonType;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED14A9721A884E390065C889 /* JsonType.swift in Sources */,
+				EDB3FBE51A89A0BF005057D5 /* JsonTypePrintable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
